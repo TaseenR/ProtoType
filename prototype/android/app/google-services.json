@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "434014594686",
+    "project_id": "prototype-khan",
+    "storage_bucket": "prototype-khan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434014594686:android:408f20deda643fb8be9a2f",
+        "android_client_info": {
+          "package_name": "com.example.prototype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434014594686-hm4kd4i7a1uca44opi0g9q80e3v5j69c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBzfV7DlkKRHcfshdnX_lXLv70BJjn-D8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434014594686-hm4kd4i7a1uca44opi0g9q80e3v5j69c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
