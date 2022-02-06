@@ -5,6 +5,7 @@ import 'package:prototype/main.dart';
 //import 'package:prototype/screens/loading/loading.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
+import 'package:prototype/screens/authenticate/auth.dart';
 
 class Map extends StatefulWidget {
   const Map({Key? key}) : super(key: key);
@@ -14,6 +15,9 @@ class Map extends StatefulWidget {
 }
 
 class _MapState extends State<Map> {
+
+  final AuthService _auth = AuthService();
+
   late GoogleMapController mapController;
   String searchAddress = '';
   final LatLng _center = const LatLng(45.521563, -122.677433);
@@ -48,6 +52,15 @@ class _MapState extends State<Map> {
         appBar: AppBar(
           title: const Text('Maps Sample App'),
           backgroundColor: Colors.green[700],
+          actions: <Widget>[
+            FlatButton.icon(onPressed: () async {
+              await _auth.signOut();
+              setState(() {
+              });
+            },
+                icon: Icon(Icons.logout) ,
+                label: Text('Log Out'))
+          ],
         ),
         body: Stack(
           children: <Widget>[

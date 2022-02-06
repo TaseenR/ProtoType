@@ -3,9 +3,13 @@ import 'package:prototype/screens/authenticate/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:prototype/screens/authenticate/sign_in.dart';
+import 'package:prototype/screens/loading.dart';
 import 'package:prototype/screens/maps/maps.dart';
 
 class Register extends StatefulWidget {
+
+  final Function toggleView;
+  Register({required this.toggleView});
 
   @override
   _RegisterState createState() => _RegisterState();
@@ -18,10 +22,11 @@ class _RegisterState extends State<Register> {
   String email = '';
   String password = '';
   String error = '';
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
         elevation: 0,
@@ -36,13 +41,23 @@ class _RegisterState extends State<Register> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'Email:',
+                    fillColor: Colors.white60,
+                    filled: true
+                ),
                 validator: (val) => val!.isEmpty ? 'enter an email' : null,
                 onChanged: (val){
                   email = val;
                 },
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 25),
               TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Password:',
+                  fillColor: Colors.white60,
+                  filled: true
+                ),
                 obscureText: true,
                 validator: (val) => val!.length < 6 ? 'enter an password with more then 6 characters' : null,
                 onChanged: (val){
@@ -53,19 +68,19 @@ class _RegisterState extends State<Register> {
               ElevatedButton(
                   onPressed: (
                       ) async {
-                    if(_formKey.currentState!.validate()){
-                      dynamic signUpAttempt = await _auth.CreateAccount(email, password);
-                      if (signUpAttempt == null){
+                    if(_formKey.currentState!.validate()) {
+                      setState(() {
+                        loading = true;
+                      });
+                      dynamic signUpAttempt = await _auth.CreateAccount(
+                          email, password);
+                      if (signUpAttempt == null) {
                         setState(() {
+                          loading = false;
                           error = 'Not a valid email/password';
                         });
-                      }else{
-                            Navigator.pushReplacement(
-                            context, MaterialPageRoute(builder: (_) => Map()));
-                            }
                       }
-
-                  },
+                    }},
                   child: Text('Sign Up!'),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.black45
@@ -74,7 +89,7 @@ class _RegisterState extends State<Register> {
               SizedBox(height: 75),
               TextButton(
                   onPressed: (){
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => SignIn()));
+                    widget.toggleView();
               },
                   child: Column(
                       children: <Widget>[

@@ -20,6 +20,9 @@ class AuthService{
     return user != null ? UserAcc(uid: user.uid) : null;
   }
 
+  Stream<UserAcc?> get user{
+    return _auth.authStateChanges().map(_userFromFirebase);
+  }
 
   Future CreateAccount(String email, String password) async {
     try{

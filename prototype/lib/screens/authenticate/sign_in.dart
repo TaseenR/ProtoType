@@ -4,9 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:prototype/screens/authenticate/auth.dart';
 import 'package:prototype/screens/authenticate/register.dart';
+import 'package:prototype/screens/loading.dart';
 import 'package:prototype/screens/maps/maps.dart';
 
 class SignIn extends StatefulWidget {
+
+  final Function toggleView;
+  SignIn({required this.toggleView});
 
 
   @override
@@ -20,10 +24,11 @@ class _SignInState extends State<SignIn> {
   String email = '';
   String password = '';
   String error = '';
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
         elevation: 0,
@@ -38,6 +43,11 @@ class _SignInState extends State<SignIn> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'Email:',
+                    fillColor: Colors.white60,
+                    filled: true
+                ),
                 validator: (val) => val!.isEmpty ? 'enter an email' : null,
                 onChanged: (val){
                   email = val;
@@ -45,7 +55,13 @@ class _SignInState extends State<SignIn> {
               ),
               SizedBox(height: 20),
               TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'Password:',
+                    fillColor: Colors.white60,
+                    filled: true
+                ),
                 validator: (val) => val!.length < 6 ? 'enter an password' : null,
+                obscureText: true,
                 onChanged: (val){
                   password = val;
                 },
@@ -54,18 +70,18 @@ class _SignInState extends State<SignIn> {
               ElevatedButton(
                   onPressed: () async {
                     if(_formKey.currentState!.validate()){
+                      setState(() {
+                        loading = true;
+                      });
                       dynamic logInAttempt = await _auth.LogInWithEmail(email, password);
                       print(logInAttempt);
                       if (logInAttempt == null){
                         setState(() {
+                          loading = false;
                           error = 'Not a valid email/password';
                         });
-                      }else{
-                        Navigator.pushReplacement(
-                            context, MaterialPageRoute(builder: (_) => Map()));
-                      }
                     }
-                  },
+                  }},
                     child: Text('Log In!'),
                     style: ElevatedButton.styleFrom(
                     primary: Colors.black45
@@ -74,7 +90,7 @@ class _SignInState extends State<SignIn> {
                     SizedBox(height: 75),
                     TextButton(
                     onPressed: (){
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Register()));
+                    widget.toggleView();
                     },
                     child: Column(
                     children: <Widget>[

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:prototype/screens/authenticate/auth.dart';
 import 'package:prototype/screens/authenticate/sign_in.dart';
+import 'package:prototype/screens/authenticate/wrapper.dart';
+import 'package:provider/provider.dart';
+import 'package:prototype/screens/maps/maps.dart';
 
 
 class GetStarted extends StatefulWidget {
@@ -10,8 +14,10 @@ class GetStarted extends StatefulWidget {
 }
 
 class _GetStartedState extends State<GetStarted> {
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.blueAccent,
       body: Column(
@@ -30,7 +36,10 @@ class _GetStartedState extends State<GetStarted> {
       ),
       SizedBox(height: 20),
             MaterialButton(
-              onPressed: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => SignIn())),
+              onPressed: () {
+                  Navigator.pushReplacement(
+                      context, MaterialPageRoute(builder: (_) => Wrapper()));
+                },
               color: Colors.green,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
