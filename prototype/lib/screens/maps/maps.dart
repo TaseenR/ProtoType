@@ -6,6 +6,8 @@ import 'package:prototype/main.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:prototype/screens/authenticate/auth.dart';
+import 'package:prototype/screens/maps/tfl.dart';
+import 'package:tfl_api_client/tfl_api_client.dart';
 
 class Map extends StatefulWidget {
   const Map({Key? key}) : super(key: key);
@@ -35,6 +37,8 @@ class _MapState extends State<Map> {
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
   }
+  
+  Future<List<Place>> x = returnAll();
 
   searchAndNavigate() {
     locationFromAddress(searchAddress).then((result) {
@@ -97,6 +101,7 @@ class _MapState extends State<Map> {
                     onChanged: (val) {
                       setState(() {
                         searchAddress = val;
+                        print(x.toString());
                       });
                     },
                   ),
