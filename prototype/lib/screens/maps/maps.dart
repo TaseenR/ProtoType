@@ -40,7 +40,7 @@ class _MapState extends State<Map> {
     locationFromAddress(searchAddress).then((result) {
       mapController.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
         target: LatLng(result[0].latitude, result[0].longitude),
-        zoom: 10,
+        zoom: 15,
       )));
     });
   }
