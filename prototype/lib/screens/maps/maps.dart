@@ -2,7 +2,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:prototype/main.dart';
-import 'package:prototype/screens/loading/loading.dart';
+//import 'package:prototype/screens/loading/loading.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 

@@ -2,17 +2,25 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:prototype/screens/authenticate/auth.dart';
 import 'package:prototype/screens/authenticate/register.dart';
 import 'package:prototype/screens/maps/maps.dart';
 
 class SignIn extends StatefulWidget {
-  const SignIn({Key? key}) : super(key: key);
+
 
   @override
   _SignInState createState() => _SignInState();
 }
 
 class _SignInState extends State<SignIn> {
+
+  final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>();
+  String email = '';
+  String password = '';
+  String error = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,44 +32,63 @@ class _SignInState extends State<SignIn> {
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextFormField(
-              onChanged: (val){
-
-              },
-            ),
-            SizedBox(height: 20),
-            TextFormField(
-              onChanged: (val){
-
-              },
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-                onPressed: (){
-
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextFormField(
+                validator: (val) => val!.isEmpty ? 'enter an email' : null,
+                onChanged: (val){
+                  email = val;
                 },
-                child: Text('Log In!'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.black45
-                ),
-            ),
-            SizedBox(height: 75),
-            TextButton(
-                onPressed: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Register()));
-            },
-                child: Column(
+              ),
+              SizedBox(height: 20),
+              TextFormField(
+                validator: (val) => val!.length < 6 ? 'enter an password' : null,
+                onChanged: (val){
+                  password = val;
+                },
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                  onPressed: () async {
+                    if(_formKey.currentState!.validate()){
+                      dynamic logInAttempt = await _auth.LogInWithEmail(email, password);
+                      print(logInAttempt);
+                      if (logInAttempt == null){
+                        setState(() {
+                          error = 'Not a valid email/password';
+                        });
+                      }else{
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (_) => Map()));
+                      }
+                    }
+                  },
+                    child: Text('Log In!'),
+                    style: ElevatedButton.styleFrom(
+                    primary: Colors.black45
+                    ),
+                    ),
+                    SizedBox(height: 75),
+                    TextButton(
+                    onPressed: (){
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Register()));
+                    },
+                    child: Column(
                     children: <Widget>[
-                      Text('Not a member?'),
-              Text( 'Register here!'),
-                ]
-            )
+                    Text('Not a member?'),
+                    Text(
+                   'Register here!'),
+                      SizedBox(height: 20),
+                      Text('$error',style: TextStyle(color: Colors.red),),
+                  ]
+              )
     )
 
-          ],
+            ],
+          ),
         ),
       ),
     );

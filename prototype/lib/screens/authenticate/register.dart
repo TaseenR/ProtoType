@@ -17,6 +17,7 @@ class _RegisterState extends State<Register> {
   final _formKey = GlobalKey<FormState>();
   String email = '';
   String password = '';
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +43,7 @@ class _RegisterState extends State<Register> {
               ),
               SizedBox(height: 20),
               TextFormField(
+                obscureText: true,
                 validator: (val) => val!.length < 6 ? 'enter an password with more then 6 characters' : null,
                 onChanged: (val){
                   password = val;
@@ -50,12 +52,19 @@ class _RegisterState extends State<Register> {
               SizedBox(height: 20),
               ElevatedButton(
                   onPressed: (
-                      ){
+                      ) async {
                     if(_formKey.currentState!.validate()){
-                      _auth.CreateAccount(email, password);
-                      Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (_) => Map()));
-                    }
+                      dynamic signUpAttempt = await _auth.CreateAccount(email, password);
+                      if (signUpAttempt == null){
+                        setState(() {
+                          error = 'Not a valid email/password';
+                        });
+                      }else{
+                            Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (_) => Map()));
+                            }
+                      }
+
                   },
                   child: Text('Sign Up!'),
                   style: ElevatedButton.styleFrom(
@@ -73,8 +82,10 @@ class _RegisterState extends State<Register> {
                 Text( 'Log in here!'),
                   ]
               )
-    )
-
+    ),
+              SizedBox(height: 20),
+              Text(error,
+              style: TextStyle(color: Colors.red),)
             ],
           ),
         ),

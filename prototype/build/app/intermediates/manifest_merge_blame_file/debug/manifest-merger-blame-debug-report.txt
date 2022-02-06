@@ -17,211 +17,262 @@
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 15-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
 15-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:22-76
-16
-17    <uses-feature
-17-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
-18        android:glEsVersion="0x00020000"
-18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
-19        android:required="true" />
-19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
-20
-21    <application
-22        android:name="android.app.Application"
-23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.6.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\8ec5a4192b12a309556d408337153575\core-1.6.0\AndroidManifest.xml:24:18-86
-24        android:debuggable="true"
-25        android:extractNativeLibs="false"
-26        android:icon="@mipmap/ic_launcher"
-27        android:label="prototype" >
-28        <activity
-29            android:name="com.example.prototype.MainActivity"
-30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-31            android:exported="true"
-32            android:hardwareAccelerated="true"
-33            android:launchMode="singleTop"
-34            android:theme="@style/LaunchTheme"
-35            android:windowSoftInputMode="adjustResize" >
-36
-37            <!--
-38                 Specifies an Android theme to apply to this Activity as soon as
-39                 the Android process has started. This theme is visible to the user
-40                 while the Flutter UI initializes. After that, this theme continues
-41                 to determine the Window background behind the Flutter UI.
-42            -->
-43            <meta-data
-44                android:name="io.flutter.embedding.android.NormalTheme"
-45                android:resource="@style/NormalTheme" />
-46
-47            <intent-filter>
-48                <action android:name="android.intent.action.MAIN" />
-49
-50                <category android:name="android.intent.category.LAUNCHER" />
-51            </intent-filter>
-52        </activity>
-53        <!--
-54             Don't delete the meta-data below.
-55             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-56        -->
-57        <meta-data
-58            android:name="flutterEmbedding"
-59            android:value="2" />
-60        <meta-data
-61            android:name="com.google.android.geo.API_KEY"
-62            android:value="AIzaSyAlb2y4PT8shplcLijTaObFr7VwY59U1wo" />
-63
-64        <service
-64-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
-65            android:name="com.google.firebase.components.ComponentDiscoveryService"
-65-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
-66            android:directBootAware="true"
-66-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
-67            android:exported="false" >
-67-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:76:13-37
-68            <meta-data
-68-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-69                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-69-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
-70                android:value="com.google.firebase.components.ComponentRegistrar" />
-70-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
-71            <meta-data
-71-->[:firebase_core] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-72                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-72-->[:firebase_core] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
-73                android:value="com.google.firebase.components.ComponentRegistrar" />
-73-->[:firebase_core] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
-74            <meta-data
-74-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:77:13-79:85
-75                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-75-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:78:17-109
-76                android:value="com.google.firebase.components.ComponentRegistrar" />
-76-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:79:17-82
-77        </service>
-78
-79        <activity
-79-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:27:9-44:20
-80            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-80-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:28:13-80
-81            android:excludeFromRecents="true"
-81-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:29:13-46
-82            android:exported="true"
-82-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:30:13-36
-83            android:launchMode="singleTask"
-83-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:31:13-44
-84            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-84-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:32:13-72
-85            <intent-filter>
-85-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:33:13-43:29
-86                <action android:name="android.intent.action.VIEW" />
-86-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
-86-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
-87
-88                <category android:name="android.intent.category.DEFAULT" />
-88-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
-88-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
-89                <category android:name="android.intent.category.BROWSABLE" />
-89-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
-89-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
-90
-91                <data
-91-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
-92                    android:host="firebase.auth"
-92-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
-93                    android:path="/"
-93-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
-94                    android:scheme="genericidp" />
-94-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
-95            </intent-filter>
-96        </activity>
-97        <activity
-97-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:45:9-62:20
-98            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-98-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:46:13-79
-99            android:excludeFromRecents="true"
-99-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:47:13-46
-100            android:exported="true"
-100-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:48:13-36
-101            android:launchMode="singleTask"
-101-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:49:13-44
-102            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-102-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:50:13-72
-103            <intent-filter>
-103-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:51:13-61:29
-104                <action android:name="android.intent.action.VIEW" />
-104-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
-104-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
-105
-106                <category android:name="android.intent.category.DEFAULT" />
-106-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
-106-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
-107                <category android:name="android.intent.category.BROWSABLE" />
-107-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
-107-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
-108
-109                <data
-109-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
-110                    android:host="firebase.auth"
-110-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
-111                    android:path="/"
-111-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
-112                    android:scheme="recaptcha" />
-112-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
-113            </intent-filter>
-114        </activity>
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[com.google.android.gms:play-services-measurement-api:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\9e738151abdf33b4f102becf9a6bad6e\jetified-play-services-measurement-api-20.0.2\AndroidManifest.xml:24:5-68
+16-->[com.google.android.gms:play-services-measurement-api:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\9e738151abdf33b4f102becf9a6bad6e\jetified-play-services-measurement-api-20.0.2\AndroidManifest.xml:24:22-65
+17
+18    <uses-feature
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+19        android:glEsVersion="0x00020000"
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+20        android:required="true" />
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+21
+22    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Include required permissions for Advertising Id -->
+22-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:26:5-110
+22-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:26:22-107
+23    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+23-->[com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\b87ee6138d9a16505fa287f68d56a584\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79
+23-->[com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\b87ee6138d9a16505fa287f68d56a584\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:22-76
+24
+25    <application
+26        android:name="android.app.Application"
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.6.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\8ec5a4192b12a309556d408337153575\core-1.6.0\AndroidManifest.xml:24:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:icon="@mipmap/ic_launcher"
+31        android:label="prototype" >
+32        <activity
+33            android:name="com.example.prototype.MainActivity"
+34            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+35            android:exported="true"
+36            android:hardwareAccelerated="true"
+37            android:launchMode="singleTop"
+38            android:theme="@style/LaunchTheme"
+39            android:windowSoftInputMode="adjustResize" >
+40
+41            <!--
+42                 Specifies an Android theme to apply to this Activity as soon as
+43                 the Android process has started. This theme is visible to the user
+44                 while the Flutter UI initializes. After that, this theme continues
+45                 to determine the Window background behind the Flutter UI.
+46            -->
+47            <meta-data
+48                android:name="io.flutter.embedding.android.NormalTheme"
+49                android:resource="@style/NormalTheme" />
+50
+51            <intent-filter>
+52                <action android:name="android.intent.action.MAIN" />
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+55            </intent-filter>
+56        </activity>
+57        <!--
+58             Don't delete the meta-data below.
+59             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+60        -->
+61        <meta-data
+62            android:name="flutterEmbedding"
+63            android:value="2" />
+64        <meta-data
+65            android:name="com.google.android.geo.API_KEY"
+66            android:value="AIzaSyAlb2y4PT8shplcLijTaObFr7VwY59U1wo" />
+67
+68        <service
+68-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+69            android:name="com.google.firebase.components.ComponentDiscoveryService"
+69-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+70            android:directBootAware="true"
+70-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+71            android:exported="false" >
+71-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:76:13-37
+72            <meta-data
+72-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+73                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+73-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[:firebase_auth] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+75            <meta-data
+75-->[:firebase_core] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+76                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+76-->[:firebase_core] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[:firebase_core] C:\Users\tasee\OneDrive\Desktop\Flutter Projects\ProtoType\prototype\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+78            <meta-data
+78-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:77:13-79:85
+79                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+79-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:78:17-109
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:79:17-82
+81            <meta-data
+81-->[com.google.android.gms:play-services-measurement-api:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\9e738151abdf33b4f102becf9a6bad6e\jetified-play-services-measurement-api-20.0.2\AndroidManifest.xml:30:13-32:85
+82                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+82-->[com.google.android.gms:play-services-measurement-api:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\9e738151abdf33b4f102becf9a6bad6e\jetified-play-services-measurement-api-20.0.2\AndroidManifest.xml:31:17-139
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[com.google.android.gms:play-services-measurement-api:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\9e738151abdf33b4f102becf9a6bad6e\jetified-play-services-measurement-api-20.0.2\AndroidManifest.xml:32:17-82
+84            <meta-data
+84-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2b663374f2a3beef67e4fc09532fc190\jetified-firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+85                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+85-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2b663374f2a3beef67e4fc09532fc190\jetified-firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2b663374f2a3beef67e4fc09532fc190\jetified-firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+87        </service>
+88
+89        <activity
+89-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:27:9-44:20
+90            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+90-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:28:13-80
+91            android:excludeFromRecents="true"
+91-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:29:13-46
+92            android:exported="true"
+92-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:30:13-36
+93            android:launchMode="singleTask"
+93-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:31:13-44
+94            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+94-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:32:13-72
+95            <intent-filter>
+95-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:33:13-43:29
+96                <action android:name="android.intent.action.VIEW" />
+96-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
+96-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
+97
+98                <category android:name="android.intent.category.DEFAULT" />
+98-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+98-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+99                <category android:name="android.intent.category.BROWSABLE" />
+99-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
+99-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
+100
+101                <data
+101-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
+102                    android:host="firebase.auth"
+102-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
+103                    android:path="/"
+103-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
+104                    android:scheme="genericidp" />
+104-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
+105            </intent-filter>
+106        </activity>
+107        <activity
+107-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:45:9-62:20
+108            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+108-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:46:13-79
+109            android:excludeFromRecents="true"
+109-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:47:13-46
+110            android:exported="true"
+110-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:48:13-36
+111            android:launchMode="singleTask"
+111-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:49:13-44
+112            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+112-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:50:13-72
+113            <intent-filter>
+113-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:51:13-61:29
+114                <action android:name="android.intent.action.VIEW" />
+114-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
+114-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
 115
-116        <service
-116-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:64:9-73:19
-117            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
-117-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:65:13-101
-118            android:enabled="true"
-118-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:66:13-35
-119            android:exported="false" >
-119-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:67:13-37
-120            <intent-filter>
-120-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:68:13-72:29
-121                <action android:name="com.google.firebase.auth.api.gms.service.START" />
-121-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:17-89
-121-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:25-86
-122
-123                <category android:name="android.intent.category.DEFAULT" />
-123-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
-123-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
-124            </intent-filter>
-125        </service>
-126
-127        <provider
-127-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
-128            android:name="com.google.firebase.provider.FirebaseInitProvider"
-128-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
-129            android:authorities="com.example.prototype.firebaseinitprovider"
-129-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
-130            android:directBootAware="true"
-130-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
-131            android:exported="false"
-131-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
-132            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
-132-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
-133        <uses-library
-133-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-134            android:name="org.apache.http.legacy"
-134-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-135            android:required="false" />
-135-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+116                <category android:name="android.intent.category.DEFAULT" />
+116-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+116-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+117                <category android:name="android.intent.category.BROWSABLE" />
+117-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
+117-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
+118
+119                <data
+119-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
+120                    android:host="firebase.auth"
+120-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
+121                    android:path="/"
+121-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
+122                    android:scheme="recaptcha" />
+122-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
+123            </intent-filter>
+124        </activity>
+125
+126        <service
+126-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:64:9-73:19
+127            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+127-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:65:13-101
+128            android:enabled="true"
+128-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:66:13-35
+129            android:exported="false" >
+129-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:67:13-37
+130            <intent-filter>
+130-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:68:13-72:29
+131                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+131-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:17-89
+131-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:25-86
+132
+133                <category android:name="android.intent.category.DEFAULT" />
+133-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+133-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+134            </intent-filter>
+135        </service>
 136
-137        <activity
-137-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-138            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-138-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-139            android:exported="false"
-139-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-140            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-140-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-141
-142        <meta-data
-142-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\14e561dfe998324f0993f7eed2935f20\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
-143            android:name="com.google.android.gms.version"
-143-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\14e561dfe998324f0993f7eed2935f20\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
-144            android:value="@integer/google_play_services_version" />
-144-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\14e561dfe998324f0993f7eed2935f20\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
-145    </application>
+137        <provider
+137-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+138            android:name="com.google.firebase.provider.FirebaseInitProvider"
+138-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+139            android:authorities="com.example.prototype.firebaseinitprovider"
+139-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+140            android:directBootAware="true"
+140-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+141            android:exported="false"
+141-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+142            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
+142-->[com.google.firebase:firebase-common:20.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+143        <uses-library
+143-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+144            android:name="org.apache.http.legacy"
+144-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+145            android:required="false" />
+145-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\2ecb962bf315e898c1283c07c9a726a7\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
 146
-147</manifest>
+147        <activity
+147-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+148            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+148-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+149            android:exported="false"
+149-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+150            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+150-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+151
+152        <receiver
+152-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:29:9-33:20
+153            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+153-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:30:13-85
+154            android:enabled="true"
+154-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:31:13-35
+155            android:exported="false" >
+155-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:32:13-37
+156        </receiver>
+157
+158        <service
+158-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:35:9-38:40
+159            android:name="com.google.android.gms.measurement.AppMeasurementService"
+159-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:36:13-84
+160            android:enabled="true"
+160-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:37:13-35
+161            android:exported="false" />
+161-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:38:13-37
+162        <service
+162-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:39:9-43:72
+163            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+163-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:40:13-87
+164            android:enabled="true"
+164-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:41:13-35
+165            android:exported="false"
+165-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:42:13-37
+166            android:permission="android.permission.BIND_JOB_SERVICE" />
+166-->[com.google.android.gms:play-services-measurement:20.0.2] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\7f76d9c9603f5f5c54251ad07a4d5d56\jetified-play-services-measurement-20.0.2\AndroidManifest.xml:43:13-69
+167
+168        <meta-data
+168-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\6f55727569cdc4f2e92c738b6d0b61e3\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+169            android:name="com.google.android.gms.version"
+169-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\6f55727569cdc4f2e92c738b6d0b61e3\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+170            android:value="@integer/google_play_services_version" />
+170-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\tasee\.gradle\caches\transforms-2\files-2.1\6f55727569cdc4f2e92c738b6d0b61e3\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+171    </application>
+172
+173</manifest>
