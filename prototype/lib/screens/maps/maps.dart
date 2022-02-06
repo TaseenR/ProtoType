@@ -40,7 +40,7 @@ class _MapState extends State<Map> {
     locationFromAddress(searchAddress).then((result) {
       mapController.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
         target: LatLng(result[0].latitude, result[0].longitude),
-        zoom: 10,
+        zoom: 15,
       )));
     });
   }
@@ -51,7 +51,7 @@ class _MapState extends State<Map> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Maps Sample App'),
-          backgroundColor: Colors.green[700],
+          backgroundColor: Colors.black45,
           actions: <Widget>[
             FlatButton.icon(onPressed: () async {
               await _auth.signOut();
