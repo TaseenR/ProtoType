@@ -21,6 +21,9 @@ class _RegisterState extends State<Register> {
   final _formKey = GlobalKey<FormState>();
   String email = '';
   String password = '';
+  String firstname = '';
+  String lastname = '';
+  String age = '';
   String error = '';
   bool loading = false;
 
@@ -34,12 +37,18 @@ class _RegisterState extends State<Register> {
         title: Text('Sign Up!',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold ,fontSize: 20,),)
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+        padding: EdgeInsets.fromLTRB(40, 40, 40, 5),
         child: Form(
           key: _formKey,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+
+
+
+
+              // email
               TextFormField(
                 decoration: InputDecoration(
                     hintText: 'Email:',
@@ -51,7 +60,11 @@ class _RegisterState extends State<Register> {
                   email = val;
                 },
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 20),
+
+
+
+              // password
               TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Password:',
@@ -65,6 +78,54 @@ class _RegisterState extends State<Register> {
                 },
               ),
               SizedBox(height: 20),
+
+              //firstname
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'First Name:',
+                    fillColor: Colors.white60,
+                    filled: true
+                ),
+                validator: (val) => val!.isEmpty ? 'enter an email' : null,
+                onChanged: (val){
+                  firstname = val;
+                },
+              ),
+              SizedBox(height: 25),
+
+              //surname
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'Surname:',
+                    fillColor: Colors.white60,
+                    filled: true
+                ),
+                validator: (val) => val!.isEmpty ? 'enter an email' : null,
+                onChanged: (val){
+                  lastname = val;
+                },
+              ),
+
+              //age
+              SizedBox(height: 25),
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'Age:',
+                    fillColor: Colors.white60,
+                    filled: true
+                ),
+                validator: (val) => val!.isEmpty ? 'enter an email' : null,
+                keyboardType: TextInputType.number,
+                onChanged: (val){
+                  age = val;
+                },
+              ),
+              SizedBox(height: 25),
+
+
+
+
+              //enter button
               ElevatedButton(
                   onPressed: (
                       ) async {
@@ -73,7 +134,7 @@ class _RegisterState extends State<Register> {
                         loading = true;
                       });
                       dynamic signUpAttempt = await _auth.CreateAccount(
-                          email, password);
+                          email, password,firstname,lastname,age);
                       if (signUpAttempt == null) {
                         setState(() {
                           loading = false;
@@ -86,7 +147,7 @@ class _RegisterState extends State<Register> {
                     primary: Colors.black45
                   ),
               ),
-              SizedBox(height: 75),
+              SizedBox(height: 20),
               TextButton(
                   onPressed: (){
                     widget.toggleView();

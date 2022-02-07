@@ -7,7 +7,11 @@ import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:prototype/screens/authenticate/auth.dart';
 import 'package:prototype/screens/maps/tfl.dart';
+import 'package:provider/provider.dart';
 import 'package:tfl_api_client/tfl_api_client.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:prototype/screens/authenticate/database.dart';
+import 'package:provider/provider.dart';
 
 class Map extends StatefulWidget {
   const Map({Key? key}) : super(key: key);
@@ -53,62 +57,62 @@ class _MapState extends State<Map> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Maps Sample App'),
-          backgroundColor: Colors.black45,
-          actions: <Widget>[
-            FlatButton.icon(onPressed: () async {
-              await _auth.signOut();
-              setState(() {
-              });
-            },
-                icon: Icon(Icons.logout) ,
-                label: Text('Log Out'))
-          ],
-        ),
-        body: Stack(
-          children: <Widget>[
-            GoogleMap(
-              onMapCreated: _onMapCreated,
-              initialCameraPosition: CameraPosition(
-                target: _center,
-                zoom: 11.0,
+          appBar: AppBar(
+            title: const Text('Maps Sample App'),
+            backgroundColor: Colors.black45,
+            actions: <Widget>[
+              FlatButton.icon(onPressed: () async {
+                await _auth.signOut();
+                setState(() {
+                });
+              },
+                  icon: Icon(Icons.logout) ,
+                  label: Text('Log Out'))
+            ],
+          ),
+          body: Stack(
+            children: <Widget>[
+              GoogleMap(
+                onMapCreated: _onMapCreated,
+                initialCameraPosition: CameraPosition(
+                  target: _center,
+                  zoom: 11.0,
+                ),
+                markers: {googlePlexMarker},
               ),
-              markers: {googlePlexMarker},
-            ),
-            Positioned(
-                top: 30.0,
-                right: 15.0,
-                left: 15.0,
-                child: Container(
-                  height: 50.0,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.white,
-                  ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Enter Address',
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.only(top: 15.0, left: 15.0),
-                      suffixIcon: IconButton(
-                        icon: Icon(Icons.search),
-                        onPressed: searchAndNavigate,
-                        iconSize: 30.0,
-                      ),
+              Positioned(
+                  top: 30.0,
+                  right: 15.0,
+                  left: 15.0,
+                  child: Container(
+                    height: 50.0,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Colors.white,
                     ),
-                    onChanged: (val) {
-                      setState(() {
-                        searchAddress = val;
-                        print(x.toString());
-                      });
-                    },
-                  ),
-                ))
-          ],
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Enter Address',
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.only(top: 15.0, left: 15.0),
+                        suffixIcon: IconButton(
+                          icon: Icon(Icons.search),
+                          onPressed: searchAndNavigate,
+                          iconSize: 30.0,
+                        ),
+                      ),
+                      onChanged: (val) {
+                        setState(() {
+                          searchAddress = val;
+                          print(x.toString());
+                        });
+                      },
+                    ),
+                  ))
+            ],
+          ),
         ),
-      ),
-    );
+      );
   }
 }

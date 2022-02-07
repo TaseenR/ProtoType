@@ -42,6 +42,7 @@ dependencies:
   geocoding: ^2.0.2
   firebase_auth: ^3.3.6
   tfl_api_client: ^1.0.0-nullsafety.1
+  cloud_firestore: ^3.1.7
 
 dev_dependencies:
   flutter_test:
