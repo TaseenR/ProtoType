@@ -17,7 +17,6 @@ class Map extends StatefulWidget {
 }
 
 class _MapState extends State<Map> {
-
   final AuthService _auth = AuthService();
 
   late GoogleMapController mapController;
@@ -31,21 +30,49 @@ class _MapState extends State<Map> {
   static final Marker googlePlexMarker = Marker(
     markerId: MarkerId('_helper'),
     infoWindow: InfoWindow(title: 'Google plex'),
-    position: LatLng(45.521563, -122.677433),
+    position: LatLng(51.5072, 0.1276),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
   );
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
   }
-  
-  Future<List<Place>> x = returnAll();
 
   searchAndNavigate() {
     locationFromAddress(searchAddress).then((result) {
+      returnListOfBikes();
+      makeMarker(result[0].latitude, result[0].longitude);
       mapController.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
         target: LatLng(result[0].latitude, result[0].longitude),
-        zoom: 15,
+        zoom: 10,
       )));
+    });
+  }
+
+  Future<List<Place>> x = returnAll();
+  List<Marker> list = [googlePlexMarker];
+
+  makeMarker(lon, lan) {
+    list.add(Marker(
+      markerId: MarkerId('' + lon.toString() + lan.toString()),
+      infoWindow: InfoWindow(title: '' + lon.toString() + lan.toString()),
+      position: LatLng(lon, lan),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+    ));
+  }
+
+  returnListOfBikes() {
+    x.then((result) {
+      for (var i = 0; i < 30; i++) {
+        list.add(Marker(
+          markerId: MarkerId(
+              '' + result[i].lat.toString() + result[i].lon.toString()),
+          infoWindow: InfoWindow(
+              title: '' + result[i].lat.toString() + result[i].lon.toString()),
+          position: LatLng(result[i].lat!, result[i].lon!),
+          icon:
+              BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+        ));
+      }
     });
   }
 
@@ -57,12 +84,12 @@ class _MapState extends State<Map> {
           title: const Text('Maps Sample App'),
           backgroundColor: Colors.black45,
           actions: <Widget>[
-            FlatButton.icon(onPressed: () async {
-              await _auth.signOut();
-              setState(() {
-              });
-            },
-                icon: Icon(Icons.logout) ,
+            FlatButton.icon(
+                onPressed: () async {
+                  await _auth.signOut();
+                  setState(() {});
+                },
+                icon: Icon(Icons.logout),
                 label: Text('Log Out'))
           ],
         ),
@@ -74,7 +101,7 @@ class _MapState extends State<Map> {
                 target: _center,
                 zoom: 11.0,
               ),
-              markers: {googlePlexMarker},
+              markers: Set<Marker>.of(list),
             ),
             Positioned(
                 top: 30.0,
@@ -101,7 +128,6 @@ class _MapState extends State<Map> {
                     onChanged: (val) {
                       setState(() {
                         searchAddress = val;
-                        print(x.toString());
                       });
                     },
                   ),
